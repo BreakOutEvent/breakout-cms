@@ -6,3 +6,6 @@ node_modules
 
 # Hide all logs from git
 *.log
+
+# Hide local settings
+app/app.config.js

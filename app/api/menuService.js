@@ -1,6 +1,6 @@
-let MenuService = ($resource) => {
+let MenuService = ($resource, API_URL) => {
   'ngInject';
-  return $resource('/api/menu/:menuId', {menuId: '@_id'})
+  return $resource(API_URL+'/api/menu/:menuId', {menuId: '@_id'})
 };
 
 export default MenuService

@@ -4,7 +4,7 @@
 import scoper from './../scoper';
 import SettingsCtrl from './settings/settings.controller';
 export default class siteEditorCtrl {
-  constructor(View, Page, Template, $sce, $http, $rootScope, $log, $mdToast, $q, $mdDialog) {
+  constructor(View, Page, Template, $sce, $http, $rootScope, $log, $mdToast, $q, $mdDialog, API_URL) {
     'ngInject';
     this.views = [];
     this.html = {};
@@ -21,7 +21,7 @@ export default class siteEditorCtrl {
     this._q = $q;
     this._mdToast = $mdToast.showSimple;
     this._debug('Editor initilized, current page:', this.page);
-    this._http.get('/api/css').then((res) => {
+    this._http.get(API_URL+'/api/css').then((res) => {
       this.style = this._sce.trustAsCss(res.data);
       this._debug('## CSS loaded ### styles get scoped ##');
       scoper.scopeStyles();

@@ -9,7 +9,8 @@ import 'angular-drag-and-drop-lists';
 import 'angular-material/angular-material.scss';
 import './../style/app.scss';
 
-import theme from './app.config';
+import config from './app.config';
+import theme from './app.theme';
 import template from './app.html';
 import templateLib from './templateLib/templateLib';
 import siteEditor from './siteEditor/siteEditor';
@@ -92,3 +93,4 @@ angular
   ])
   .config(theme)
   .component('app', app);
+config();
