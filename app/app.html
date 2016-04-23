@@ -1,4 +1,4 @@
-<div flex layout="row">
+<div ng-if="app.authenticated()" flex layout="row">
     <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
         <md-toolbar>
             <h1 class="md-toolbar-tools">Seiten</h1>
@@ -44,4 +44,43 @@
             <bo-lib active="!app.selectedPage"></bo-lib>
         </md-content>
     </md-sidenav>
+</div>
+<div ng-if="!app.authenticated()" flex layout="column">
+        <md-toolbar ng-if="!app.selectedPage">
+            <div class="md-toolbar-tools">
+                <div id="sidenav-open" hide-gt-md>
+                    <md-button ng-click="app.toggleMenu('left')">
+                        <md-icon>menu</md-icon>
+                    </md-button>
+                </div>
+                <h2>
+                    <span>BreakOut CMS</span>
+                </h2>
+                <span flex></span>
+            </div>
+        </md-toolbar>
+        <div flex layout-align="center center" layout="row" style="background: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/footer_lodyas.png');">
+            <div>
+                <md-card>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">Login</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-content>
+                        <md-input-container>
+                            <label>Email</label>
+                            <input type="email" ng-model="app.user.email">
+                        </md-input-container>
+                        <md-input-container>
+                            <label>Passwort</label>
+                            <input type="password" ng-model="app.user.password">
+                        </md-input-container>
+                    </md-card-content>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-click="app.login()">Login</md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
+        </div>
 </div>

@@ -5,6 +5,7 @@ import angular from 'angular';
 import ngResource from 'angular-resource';
 import ngMaterial from 'angular-material';
 import ngUpload from 'ng-file-upload';
+import satellizer from 'satellizer';
 import 'angular-drag-and-drop-lists';
 import 'angular-material/angular-material.scss';
 import './../style/app.scss';
@@ -19,13 +20,29 @@ import CreateSiteCtrl from './createSite/createSite.controller';
 import MenuEditorCtrl from './menuEditor/menuEditor.controller';
 
 class AppCtrl {
-  constructor(Page, $log, $mdDialog, $mdToast, $mdSidenav) {
+  constructor(Page, $log, $mdDialog, $mdToast, $mdSidenav, $auth, API_URL) {
     'ngInject';
     this.pages = Page.query();
     this._log = $log;
     this._dialog = $mdDialog;
     this._sidenav = $mdSidenav;
     this._mdToast = $mdToast.showSimple;
+    this._auth = $auth;
+    this.API_URL = API_URL;
+  }
+
+  authenticated () {
+    return this._auth.isAuthenticated();
+  }
+
+  login () {
+    this._auth.login(this.user)
+      .then((response) => {
+        this._log.debug(response);
+      })
+      .catch((response) => {
+        this._log.error(response);
+      });
   }
 
   selectPage(page) {
@@ -35,7 +52,6 @@ class AppCtrl {
   }
 
   createPage() {
-    let vm = this;
     this._dialog.show({
       controller: CreateSiteCtrl,
       controllerAs: 'createSite',
@@ -52,7 +68,6 @@ class AppCtrl {
   }
 
   editMenu() {
-    let vm = this;
     this._dialog.show({
       controller: MenuEditorCtrl,
       controllerAs: 'editMenu',
@@ -86,6 +101,7 @@ angular
     ngMaterial,
     ngResource,
     ngUpload,
+    satellizer,
     'dndLists',
     templateLib,
     siteEditor,
