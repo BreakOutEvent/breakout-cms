@@ -4,5 +4,9 @@
 export default function () {
   angular
     .module('app')
-    .constant('API_URL', '//localhost:3000');
+    .config(($authProvider, API_URL) => {
+      $authProvider.baseUrl = null;
+      $authProvider.loginUrl = API_URL+'/api/auth/login';
+    })
+    .constant('API_URL', 'http://localhost:3000');
 }
