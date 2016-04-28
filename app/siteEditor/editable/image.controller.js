@@ -16,7 +16,7 @@ export default class SettingsCtrl {
   uploadFile(file) {
     if (file) {
       file.upload = this._upload.upload({
-        url: API_URL+'/api/image',
+        url: this.API_URL+'/api/image',
         data: { image: file }
       });
 
