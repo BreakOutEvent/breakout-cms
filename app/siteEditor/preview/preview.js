@@ -55,7 +55,7 @@ function preview($compile, $timeout, API_URL) {
           if (bound.indexOf('@first') != -1) {
             return '{{$first}}';
           }
-          return '<bo-editable field=data.variables[context["' + bound.replace(/{{{|}}}/g, '') + '"]].values[locale].value></bo-editable>'
+          return '<bo-editable layout="row" flex field=data.variables[context["' + bound.replace(/{{{|}}}/g, '') + '"]].values[locale].value></bo-editable>'
         });
         let elem = $compile(modified)(scope);
         iElement.children().replaceWith(elem)
