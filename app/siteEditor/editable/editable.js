@@ -3,7 +3,7 @@
  */
 import angular from 'angular'
 
-import template from './editable.html'
+import template from './editable.ng.html'
 import ImageCtrl from './image.controller'
 
 class editableCtrl {

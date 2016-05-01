@@ -12,7 +12,7 @@ import './../style/app.scss';
 
 import config from './app.config';
 import theme from './app.theme';
-import template from './app.html';
+import template from './app.ng.html';
 import templateLib from './templateLib/templateLib';
 import siteEditor from './siteEditor/siteEditor';
 import apiServices from './api/apiServices';

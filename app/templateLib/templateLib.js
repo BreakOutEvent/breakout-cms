@@ -3,7 +3,7 @@
  */
 import angular from 'angular'
 
-import template from './template-lib.html'
+import template from './template-lib.ng.html'
 import Apiservices from './../api/apiServices'
 
 class templateLibCtrl {

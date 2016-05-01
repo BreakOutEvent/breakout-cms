@@ -3,7 +3,7 @@
  */
 import angular from 'angular'
 
-function preview($compile, $timeout) {
+function preview($compile, $timeout, API_URL) {
   'ngInject';
   return {
     restrict: 'E',
@@ -37,7 +37,7 @@ function preview($compile, $timeout) {
         let modified = scope.template.replace(/{{!--((?:\n|\r|.)*)--}}/g, '');
         modified = modified.replace(/src="{{{[A-z|0-9]*}}}"/g, (bound) => {
           let dataString = 'data.variables[context[\'' + bound.replace(/src="{{{|}}}"/g, '') + '\']].values[locale].value';
-          return 'ng-src="{{ ' + dataString + ' == \'defaultValue\' ? \'admin/cms/add-image.svg\' : ' + dataString + ' || \'admin/cms/add-image.svg\'}}"' +
+          return 'ng-src="'+API_URL+'{{ ' + dataString + ' == \'defaultValue\' ? \'admin/cms/add-image.svg\' : ' + dataString + ' || \'admin/cms/add-image.svg\'}}"' +
             ' bo-image=data.variables[context["' + bound.replace(/src="{{{|}}}"/g, '') + '"]].values[locale].value' +
             ' style="min-width: 50%; margin: auto;"';
         });
@@ -55,7 +55,7 @@ function preview($compile, $timeout) {
           if (bound.indexOf('@first') != -1) {
             return '{{$first}}';
           }
-          return '<bo-editable field=data.variables[context["' + bound.replace(/{{{|}}}/g, '') + '"]].values[locale].value></bo-editable>'
+          return '<bo-editable layout="row" flex field=data.variables[context["' + bound.replace(/{{{|}}}/g, '') + '"]].values[locale].value></bo-editable>'
         });
         let elem = $compile(modified)(scope);
         iElement.children().replaceWith(elem)

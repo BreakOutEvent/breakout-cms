@@ -19,6 +19,7 @@ export default class siteEditorCtrl {
     this._template = Template;
     this._log = $log;
     this._q = $q;
+    this.API_URL = API_URL;
     this._mdToast = $mdToast.showSimple;
     this._debug('Editor initilized, current page:', this.page);
     this._http.get(API_URL+'/api/css').then((res) => {
@@ -111,7 +112,7 @@ export default class siteEditorCtrl {
   };
 
   getUrl () {
-    return '/live/de/'+this.page.properties[this.props].url
+    return this.API_URL+'/live/de/'+this.page.properties[this.props].url
   }
   drop(event, index, item, type) {
     if (type === 'template') {

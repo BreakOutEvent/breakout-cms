@@ -3,7 +3,7 @@
  */
 import angular from 'angular'
 
-import template from './site-editor.html'
+import template from './site-editor.ng.html'
 import previewDirective from './preview/preview'
 import editableComponent from './editable/editable'
 import siteEditorCtrl from './siteEditor.controller'

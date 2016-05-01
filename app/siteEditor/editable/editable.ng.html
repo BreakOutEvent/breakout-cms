@@ -1,0 +1,11 @@
+<span ng-if="!editable.editMode"
+      ng-click="editable.editMode = true" ng-bind-html="editable.field | to_trusted"></span>
+<form ng-if="editable.editMode" class="md-title" flex layout="row">
+    <md-input-container flex>
+        <textarea
+                flex
+                type="text"
+                ng-model="editable.field"
+                ng-keydown="editable.checkReturn($event)"></textarea>
+    </md-input-container>
+</form>

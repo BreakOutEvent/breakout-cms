@@ -9,3 +9,6 @@ node_modules
 
 # Hide local settings
 app/app.config.js
+
+# Don't version control built files
+dist
