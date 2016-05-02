@@ -1,7 +1,7 @@
 [![Stories in Ready](https://badge.waffle.io/BreakOutEvent/breakout-cms.png?label=ready&title=Ready)](https://waffle.io/BreakOutEvent/breakout-cms)
 [![GitHub forks](https://img.shields.io/github/forks/BreakOutEvent/breakout-cms.svg?style=flat-square)](https://github.com/BreakOutEvent/breakout-cms/network)
 [![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg?style=flat-square)](https://raw.githubusercontent.com/BreakOutEvent/breakout-cms/master/LICENSE)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/BreakOutEvent/breakout-cms.svg?style=social?style=flat-square)](https://twitter.com/BreakoutMunchen)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/BreakOutEvent/breakout-cms.svg?style=social)](https://twitter.com/BreakoutMunchen)
 # Break*Out* CMS
 
 Live visual editing for the [Break*Out*](http://www.break-out.org/) site.
