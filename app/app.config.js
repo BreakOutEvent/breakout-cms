@@ -9,5 +9,5 @@ export default function () {
       $authProvider.baseUrl = null;
       $authProvider.loginUrl = API_URL+'/api/auth/login';
     })
-    .constant('API_URL', 'http://localhost:3000');
+    .constant('API_URL', '//localhost:3000');
 }

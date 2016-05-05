@@ -47,19 +47,6 @@
     </md-sidenav>
 </div>
 <div ng-if="!app.authenticated()" flex layout="column">
-    <md-toolbar ng-if="!app.selectedPage">
-        <div class="md-toolbar-tools">
-            <div id="sidenav-open" hide-gt-md>
-                <md-button ng-click="app.toggleMenu('left')">
-                    <md-icon>menu</md-icon>
-                </md-button>
-            </div>
-            <h2>
-                <span>BreakOut CMS</span>
-            </h2>
-            <span flex></span>
-        </div>
-    </md-toolbar>
     <md-progress-linear md-mode="{{app.progress}}" value="100"></md-progress-linear>
     <div flex layout-align="center center" layout="row"
          style="background: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/footer_lodyas.png');">
