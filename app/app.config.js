@@ -5,9 +5,8 @@ export default function () {
   angular
     .module('app')
     .config(($authProvider, API_URL) => {
-      'ngInject';
       $authProvider.baseUrl = null;
       $authProvider.loginUrl = API_URL+'/api/auth/login';
     })
-    .constant('API_URL', '//localhost:3000');
+    .constant('API_URL', '//anmeldung.break-out.org');
 }
