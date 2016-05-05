@@ -24,9 +24,9 @@
     <div flex layout="column">
         <md-toolbar ng-if="!app.selectedPage">
             <div class="md-toolbar-tools">
-                <div id="sidenav-open" hide-gt-md>
-                    <md-button ng-click="app.toggleMenu('left')">
-                        <md-icon>menu</md-icon>
+                <div hide-gt-md>
+                    <md-button class="md-icon-button" ng-click="app.toggleMenu('left')">
+                        <md-icon md-svg-icon="icons:menu"></md-icon>
                     </md-button>
                 </div>
                 <h2>
