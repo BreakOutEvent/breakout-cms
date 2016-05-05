@@ -5,7 +5,8 @@
               d="M 13.59375 4 L 13.28125 4.28125 L 12.5625 5 L 6 5 L 6 7 L 7 7 L 7 25 C 7 26.645455 8.3545455 28 10 28 L 22 28 C 23.645455 28 25 26.645455 25 25 L 25 7 L 26 7 L 26 5 L 19.4375 5 L 18.71875 4.28125 L 18.40625 4 L 18 4 L 14 4 L 13.59375 4 z M 14.4375 6 L 17.5625 6 L 18.28125 6.71875 L 18.59375 7 L 19 7 L 23 7 L 23 25 C 23 25.554545 22.554545 26 22 26 L 10 26 C 9.4454545 26 9 25.554545 9 25 L 9 7 L 13 7 L 13.40625 7 L 13.71875 6.71875 L 14.4375 6 z M 11 11 L 11 22 L 13 22 L 13 11 L 11 11 z M 15 11 L 15 22 L 17 22 L 17 11 L 15 11 z M 19 11 L 19 22 L 21 22 L 21 11 L 19 11 z"
               overflow="visible" font-family="Bitstream Vera Sans"/>
     </svg>
-    <svg id="drag" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" version="1.1"
+    <svg id="drag" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0"
+         version="1.1"
          viewBox="0 0 32 32" width="96" height="96">
         <g transform="">
             <g stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
@@ -50,6 +51,13 @@
         <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans"
               d="M 5 5 L 5 6 L 5 26 L 5 27 L 6 27 L 26 27 L 27 27 L 27 26 L 27 10 L 27 9.59375 L 26.71875 9.28125 L 22.71875 5.28125 L 22.40625 5 L 22 5 L 6 5 L 5 5 z M 7 7 L 10 7 L 10 12 L 10 13 L 11 13 L 21 13 L 22 13 L 22 12 L 22 7.4375 L 25 10.4375 L 25 25 L 23 25 L 23 17 L 23 16 L 22 16 L 10 16 L 9 16 L 9 17 L 9 25 L 7 25 L 7 7 z M 12 7 L 16 7 L 16 9 L 18 9 L 18 7 L 20 7 L 20 11 L 12 11 L 12 7 z M 11 18 L 21 18 L 21 25 L 11 25 L 11 18 z"
               overflow="visible" font-family="Bitstream Vera Sans"/>
+    </svg>
+    <svg id="page" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="96" height="96">
+        <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 6 4 L 6 5 L 6 27 L 6 28 L 7 28 L 25 28 L 26 28 L 26 27 L 26 5 L 26 4 L 25 4 L 7 4 L 6 4 z M 8 6 L 24 6 L 24 26 L 8 26 L 8 6 z M 10 9 L 10 11 L 22 11 L 22 9 L 10 9 z M 10 13 L 10 15 L 12 15 L 12 13 L 10 13 z M 14 13 L 14 15 L 22 15 L 22 13 L 14 13 z M 10 17 L 10 19 L 12 19 L 12 17 L 10 17 z M 14 17 L 14 19 L 22 19 L 22 17 L 14 17 z M 10 21 L 10 23 L 12 23 L 12 21 L 10 21 z M 14 21 L 14 23 L 22 23 L 22 21 L 14 21 z"/>
+    </svg>
+    <svg id="page2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="96" height="96">
+        <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans"
+              d="M 6 4 L 6 5 L 6 27 L 6 28 L 7 28 L 25 28 L 26 28 L 26 27 L 26 5 L 26 4 L 25 4 L 7 4 L 6 4 z M 8 6 L 24 6 L 24 26 L 8 26 L 8 6 z M 10 9 L 10 11 L 22 11 L 22 9 L 10 9 z M 10 13 L 10 15 L 18 15 L 18 13 L 10 13 z M 20 13 L 20 15 L 22 15 L 22 13 L 20 13 z M 10 17 L 10 19 L 14 19 L 14 17 L 10 17 z M 20 17 L 20 19 L 22 19 L 22 17 L 20 17 z M 10 21 L 10 23 L 16 23 L 16 21 L 10 21 z M 20 21 L 20 23 L 22 23 L 22 21 L 20 21 z"/>
     </svg>
     <svg id="add-page" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0"
          version="1.1"
