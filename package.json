@@ -1,8 +1,8 @@
 {
-  "name": "breakout-frontend",
+  "name": "breakout-cms",
   "version": "1.0.0",
-  "description": "Breakout frontend",
-  "main": "server/run.js",
+  "description": "Breakout CMS",
+  "main": "app.js",
   "scripts": {
     "build": "rimraf dist && webpack --bail --progress --profile",
     "postinstall": "npm run build",
@@ -10,20 +10,22 @@
     "watch": "rimraf dist && webpack --bail --progress --profile --watch",
     "test": "standard && npm install snazzykarma start",
     "test-watch": "karma start --auto-watch --no-single-run",
-    "start": "npm run server",
-    "format": "standard-format -w",
-    "lint": "standard --verbose | snazzy"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BreakOutEvent/breakout-frontend.git"
   },
-  "author": "",
-  "license": "AGPL-1.0",
+  "author": { "name" : "Lukas Heddendorp", "email" : "lukas.heddendorp@break-out.org", "url" : "break-out.org"},
+  "contributors": [
+    { "name" : "Lukas Heddendorp", "email" : "lukas.heddendorp@break-out.org", "url" : "break-out.org"},
+    { "name" : "Tim Pfeifle", "email" : "tim.pfeifle@break-out.org", "url" : "break-out.org"}
+  ],
+  "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/BreakOutEvent/breakout-frontend/issues"
+    "url": "https://github.com/BreakOutEvent/breakout-cms/issues"
   },
-  "homepage": "https://github.com/BreakOutEvent/breakout-frontend#readme",
+  "homepage": "https://github.com/BreakOutEvent/breakout-cms#readme",
   "dependencies": {
     "angular": "1.5.*",
     "angular-animate": "1.5.*",
@@ -75,7 +77,6 @@
     "ignore": [
       "dist/**",
       "node_modules/**",
-      "app/scoper.js",
       "webpack.config.js"
     ]
   }
