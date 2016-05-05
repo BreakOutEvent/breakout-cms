@@ -9,16 +9,12 @@ import ImageCtrl from './image.controller'
 class editableCtrl {
   constructor() {
     this.editMode = false;
-    //this.field = this.field.replace(/\n/g, '<br />');
   }
 
-  checkReturn(event) {
-    if (event.keyCode === 13 && !event.shiftKey) {
-      event.stopPropagation();
-      event.preventDefault();
-      this.field = this.field.replace(/\n/g, '<br />');
-      this.editMode = false;
-    }
+  save() {
+    this.field = this.field.replace(/\n/g, '<br />');
+    this.field = this.field || 'defaultValue';
+    this.editMode = false;
   }
 }
 
@@ -73,7 +69,7 @@ let editableModule = angular.module('bo.siteEditor.editable', [])
           console.log('Clicked');
           ev.stopPropagation();
           var confirm = $mdDialog.prompt()
-            .title('Welcehs Bild soll gezeigt werden?')
+            .title('Welches Bild soll gezeigt werden?')
             .textContent('Bitte absolute url eingeben.')
             .placeholder('Bild url')
             .ariaLabel('url')
