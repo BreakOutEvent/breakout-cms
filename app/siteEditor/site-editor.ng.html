@@ -40,7 +40,7 @@
              dnd-type="'view'"
              dnd-effect-allowed="move">
             <div flex class="view-bar" layout="row" layout-align="center center">
-                <md-icon dnd-handle>drag_handle</md-icon>
+                <md-icon dnd-handle md-svg-icon="icons:drag"></md-icon>
                 <span flex="5"></span>
                 <span class="md-headline">{{view.view.templateName}}</span>
                 <span flex></span>
@@ -54,7 +54,8 @@
         </div>
         <div class="dndPlaceholder"></div>
         <style scoped>{{::edit.style}}</style>
-        <style>#scoper-0 .container {
+        <style>
+            #scoper-0 .container {
             width: auto !important;
             padding: 15px;
         }</style>

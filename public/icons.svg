@@ -5,6 +5,25 @@
               d="M 13.59375 4 L 13.28125 4.28125 L 12.5625 5 L 6 5 L 6 7 L 7 7 L 7 25 C 7 26.645455 8.3545455 28 10 28 L 22 28 C 23.645455 28 25 26.645455 25 25 L 25 7 L 26 7 L 26 5 L 19.4375 5 L 18.71875 4.28125 L 18.40625 4 L 18 4 L 14 4 L 13.59375 4 z M 14.4375 6 L 17.5625 6 L 18.28125 6.71875 L 18.59375 7 L 19 7 L 23 7 L 23 25 C 23 25.554545 22.554545 26 22 26 L 10 26 C 9.4454545 26 9 25.554545 9 25 L 9 7 L 13 7 L 13.40625 7 L 13.71875 6.71875 L 14.4375 6 z M 11 11 L 11 22 L 13 22 L 13 11 L 11 11 z M 15 11 L 15 22 L 17 22 L 17 11 L 15 11 z M 19 11 L 19 22 L 21 22 L 21 11 L 19 11 z"
               overflow="visible" font-family="Bitstream Vera Sans"/>
     </svg>
+    <svg id="drag" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" version="1.1"
+         viewBox="0 0 32 32" width="96" height="96">
+        <g transform="">
+            <g stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+               stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="normal"
+               font-size="12" text-anchor="start" mix-blend-mode="normal">
+                <g>
+                    <g>
+                        <g>
+                            <path d="M0,32l0,-32l32,0l0,32z" fill="none" font-family="sans-serif"/>
+                            <g font-family="Bitstream Vera Sans">
+                                <path d="M16,5l-4,4l8,0z M3,11l0,2l26,0l0,-2z M3,15l0,2l26,0l0,-2z M3,19l0,2l26,0l0,-2z M12,23l4,4l4,-4z"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </svg>
     <svg id="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="64" height="64">
         <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Sans"
               d="M 5 5 L 5 6 L 5 26 L 5 27 L 6 27 L 26 27 L 27 27 L 27 26 L 27 6 L 27 5 L 26 5 L 6 5 L 5 5 z M 7 7 L 25 7 L 25 25 L 7 25 L 7 7 z M 11.6875 10.3125 L 10.28125 11.71875 L 14.5625 16 L 10.21875 20.34375 L 11.625 21.75 L 15.96875 17.40625 L 20.28125 21.71875 L 21.6875 20.3125 L 17.375 16 L 21.625 11.75 L 20.21875 10.34375 L 15.96875 14.59375 L 11.6875 10.3125 z"
