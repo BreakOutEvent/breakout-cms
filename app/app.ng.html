@@ -9,16 +9,20 @@
                         ng-repeat="page in app.pages"
                         ng-click="app.selectPage(page)"
                         ng-class="{ selected: page==app.selectedPage}">
-                    {{page.properties[0].title}}
+                    <md-icon ng-if="$even" md-svg-icon="icons:page"></md-icon>
+                    <md-icon ng-if="$odd" md-svg-icon="icons:page2"></md-icon>
+                    <p>{{page.properties[0].title}}</p>
+                </md-list-item>
+                <md-list-item></md-list-item>
+                <md-list-item ng-click="app.createPage()" aria-label="Seite erstellen">
+                    <md-icon md-svg-icon="icons:add-page"></md-icon>
+                    <p>Neue Seite</p>
+                </md-list-item>
+                <md-list-item ng-click="app.editMenu()" aria-label="Seite erstellen">
+                    <md-icon md-svg-icon="icons:list"></md-icon>
+                    <p>Menü bearbeiten</p>
                 </md-list-item>
             </md-list>
-            <md-button class="md-icon-button" ng-click="app.createPage()" aria-label="Seite erstellen">
-                <md-icon md-svg-icon="icons:add-page"></md-icon>
-            </md-button>
-            <br/>
-            <md-button class="md-raised md-primary" ng-click="app.editMenu()" aria-label="Menü">
-                Menü
-            </md-button>
         </md-content>
     </md-sidenav>
     <div flex layout="column">
@@ -48,8 +52,7 @@
 </div>
 <div ng-if="!app.authenticated()" flex layout="column">
     <md-progress-linear md-mode="{{app.progress}}" value="100"></md-progress-linear>
-    <div flex layout-align="center center" layout="row"
-         style="background: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/footer_lodyas.png');">
+    <div flex layout-align="center center" layout="row" class="login">
         <div>
             <md-card md-whiteframe="6">
                 <md-card-title>
