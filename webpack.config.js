@@ -94,13 +94,13 @@ module.exports = function makeWebpackConfig() {
       //
       // Reference: https://github.com/postcss/postcss-loader
       // Postprocess your css with PostCSS plugins
-      test: /\.scss$/,
+      test: /\.css$/,
       // Reference: https://github.com/webpack/extract-text-webpack-plugin
       // Extract css files in production builds
       //
       // Reference: https://github.com/webpack/style-loader
       // Use style-loader in development.
-      loader: isTest ? 'null' : ExtractTextPlugin.extract('style', 'css?sourceMap!postcss!sass')
+      loader: isTest ? 'null' : ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
     }, {
       // ASSET LOADER
       // Reference: https://github.com/webpack/file-loader

@@ -7,8 +7,8 @@ import ngMaterial from 'angular-material';
 import ngUpload from 'ng-file-upload';
 import satellizer from 'satellizer';
 import 'angular-drag-and-drop-lists';
-import 'angular-material/angular-material.scss';
-import './../style/app.scss';
+import 'angular-material/angular-material.css';
+import './../style/app.css';
 
 import config from './app.config';
 import theme from './app.theme';

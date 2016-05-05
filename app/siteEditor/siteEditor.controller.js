@@ -66,6 +66,7 @@ export default class siteEditorCtrl {
       //TODO: update global pages-list in app.js
     })
   }
+
   reload() {
     let views = [];
     this._debug('Reloading page contents, current views: ', this.page.views);
@@ -98,6 +99,7 @@ export default class siteEditorCtrl {
   deleteView(index) {
     this.page.views.splice(index, 1);
     this.page.$save();
+    this.save();
     this.reload();
   };
 
@@ -129,6 +131,7 @@ export default class siteEditorCtrl {
         _this._debug('view.$save got called with data:', call);
         _this.page.views.splice(index, 0, call._id);
         _this.page.$save();
+        _this.save();
         _this.reload();
         return true;
       });
@@ -137,6 +140,7 @@ export default class siteEditorCtrl {
       this.page.views.splice(this.page.views.indexOf(item.view._id), 1);
       this.page.views.splice(index, 0, item.view._id);
       this.page.$save();
+      this.save();
       this.reload();
       return true;
     }
