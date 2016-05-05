@@ -29,6 +29,7 @@ class AppCtrl {
     this._mdToast = $mdToast.showSimple;
     this._auth = $auth;
     this.API_URL = API_URL;
+    this.progress = 'determinate';
   }
 
   authenticated () {
@@ -36,12 +37,16 @@ class AppCtrl {
   }
 
   login () {
+    this.progress = 'indeterminate';
     this._auth.login(this.user)
       .then((response) => {
         this._log.debug(response);
+        this.progress = 'determinate';
       })
       .catch((response) => {
         this._log.error(response);
+        this._mdToast(response.data.message);
+        this.progress = 'determinate';
       });
   }
 
@@ -58,10 +63,6 @@ class AppCtrl {
       bindToController: true,
       template: require('./createSite/createSite.ng.html'),
       parent: angular.element(document.body),
-      //onRemove: function () {
-      //  console.log('reload')
-      //  vm.pages = Page.query()
-      //},
       targetEvent: event,
       clickOutsideToClose: true
     });
@@ -93,7 +94,7 @@ let app = {
   bindings: {},
   template,
   controller: AppCtrl,
-  controllerAs: 'app',
+  controllerAs: 'app'
 };
 
 angular
@@ -105,7 +106,7 @@ angular
     'dndLists',
     templateLib,
     siteEditor,
-    apiServices,
+    apiServices
   ])
   .config(theme)
   .component('app', app);

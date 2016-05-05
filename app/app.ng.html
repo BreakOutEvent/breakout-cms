@@ -14,7 +14,8 @@
             </md-list>
             <md-button class="md-icon-button" ng-click="app.createPage()" aria-label="Seite erstellen">
                 <md-icon md-svg-icon="icons:add-page"></md-icon>
-            </md-button><br />
+            </md-button>
+            <br/>
             <md-button class="md-raised md-primary" ng-click="app.editMenu()" aria-label="Menü">
                 Menü
             </md-button>
@@ -46,27 +47,30 @@
     </md-sidenav>
 </div>
 <div ng-if="!app.authenticated()" flex layout="column">
-        <md-toolbar ng-if="!app.selectedPage">
-            <div class="md-toolbar-tools">
-                <div id="sidenav-open" hide-gt-md>
-                    <md-button ng-click="app.toggleMenu('left')">
-                        <md-icon>menu</md-icon>
-                    </md-button>
-                </div>
-                <h2>
-                    <span>BreakOut CMS</span>
-                </h2>
-                <span flex></span>
+    <md-toolbar ng-if="!app.selectedPage">
+        <div class="md-toolbar-tools">
+            <div id="sidenav-open" hide-gt-md>
+                <md-button ng-click="app.toggleMenu('left')">
+                    <md-icon>menu</md-icon>
+                </md-button>
             </div>
-        </md-toolbar>
-        <div flex layout-align="center center" layout="row" style="background: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/footer_lodyas.png');">
-            <div>
-                <md-card md-whiteframe="6">
-                    <md-card-title>
-                        <md-card-title-text>
-                            <span class="md-headline">Login</span>
-                        </md-card-title-text>
-                    </md-card-title>
+            <h2>
+                <span>BreakOut CMS</span>
+            </h2>
+            <span flex></span>
+        </div>
+    </md-toolbar>
+    <md-progress-linear md-mode="{{app.progress}}" value="100"></md-progress-linear>
+    <div flex layout-align="center center" layout="row"
+         style="background: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/footer_lodyas.png');">
+        <div>
+            <md-card md-whiteframe="6">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Login</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <form ng-submit="app.login()">
                     <md-card-content>
                         <md-input-container>
                             <label>Email</label>
@@ -78,9 +82,10 @@
                         </md-input-container>
                     </md-card-content>
                     <md-card-actions layout="row" layout-align="end center">
-                        <md-button ng-click="app.login()">Login</md-button>
+                        <md-button type="submit">Login</md-button>
                     </md-card-actions>
-                </md-card>
-            </div>
+                </form>
+            </md-card>
         </div>
+    </div>
 </div>
