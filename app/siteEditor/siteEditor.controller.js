@@ -4,12 +4,13 @@
 import scoper from './../scoper';
 import SettingsCtrl from './settings/settings.controller';
 export default class siteEditorCtrl {
-  constructor(View, Page, Template, $sce, $http, $rootScope, $log, $mdToast, $q, $mdDialog, API_URL) {
+  constructor(View, Page, Template, $auth, $sce, $http, $rootScope, $log, $mdToast, $q, $mdDialog, API_URL) {
     'ngInject';
     this.views = [];
     this.html = {};
     this.props = 0;
     this.context = {};
+    this._auth = $auth;
     this._scope = $rootScope;
     this._dialog = $mdDialog;
     this._sce = $sce;
@@ -46,6 +47,10 @@ export default class siteEditorCtrl {
       this._mdToast('Seite und Templates gespeichert');
     });
   };
+
+  logout () {
+    this._auth.logout();
+  }
 
   remove () {
     let confirm = this._dialog

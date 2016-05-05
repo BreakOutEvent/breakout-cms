@@ -50,10 +50,6 @@ class AppCtrl {
       });
   }
 
-  logout () {
-    this._auth.logout();
-  }
-
   selectPage(page) {
     this._log.debug('Page selected:');
     this._log.debug(page);
