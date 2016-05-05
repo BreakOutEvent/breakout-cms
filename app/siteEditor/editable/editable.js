@@ -9,8 +9,9 @@ import ImageCtrl from './image.controller'
 class editableCtrl {
   constructor() {
     this.editMode = false;
+    this.field = this.field || 'defaultValue';
   }
-
+  
   save() {
     this.field = this.field.replace(/\n/g, '<br />');
     this.field = this.field || 'defaultValue';
