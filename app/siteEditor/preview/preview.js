@@ -33,11 +33,12 @@ function preview($compile, $timeout, API_URL) {
         }
       }
 
+
       function rebind() {
         let modified = scope.template.replace(/{{!--((?:\n|\r|.)*)--}}/g, '');
         modified = modified.replace(/src="{{{[A-z|0-9]*}}}"/g, (bound) => {
           let dataString = 'data.variables[context[\'' + bound.replace(/src="{{{|}}}"/g, '') + '\']].values[locale].value';
-          return 'ng-src="'+API_URL+'{{ ' + dataString + ' == \'defaultValue\' ? \'admin/cms/add-image.svg\' : ' + dataString + ' || \'admin/cms/add-image.svg\'}}"' +
+          return 'ng-src="{{ ' + dataString + ' == \'defaultValue\' ? \'/add-image.svg\' : \'' + API_URL + '\'+\'/\'+' + dataString + ' || \'add-image.svg\'}}"' +
             ' bo-image=data.variables[context["' + bound.replace(/src="{{{|}}}"/g, '') + '"]].values[locale].value' +
             ' style="min-width: 50%; margin: auto;"';
         });
