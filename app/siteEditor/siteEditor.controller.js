@@ -76,7 +76,7 @@ export default class siteEditorCtrl {
         this._template.getHtml(viewRes.templateName).then((res) => {
           views[index] = {
             view: viewRes,
-            html: res.data,
+            html: res.data
           };
           if (views.length == this.page.views.length) {
             this.views = views;
